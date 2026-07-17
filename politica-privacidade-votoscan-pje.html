@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade — VotoScan PJe</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  :root{
+    --paper: #f6f3ec;
+    --paper-edge: #ece7da;
+    --ink: #1c1a16;
+    --ink-soft: #4a463d;
+    --rule: #c9c2ae;
+    --accent: #7a3b2e;
+    --accent-dim: #a9694f;
+    --stamp: #35573f;
+  }
+
+  *{ box-sizing: border-box; }
+
+  html,body{
+    margin:0;
+    padding:0;
+    background: var(--paper-edge);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, serif;
+  }
+
+  body{
+    background-image:
+      radial-gradient(circle at 15% 10%, rgba(0,0,0,0.02), transparent 40%),
+      radial-gradient(circle at 85% 90%, rgba(0,0,0,0.03), transparent 45%);
+  }
+
+  .sheet{
+    max-width: 780px;
+    margin: 56px auto 96px;
+    background: var(--paper);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.06), 0 20px 45px -25px rgba(0,0,0,0.35);
+    border: 1px solid var(--rule);
+    position: relative;
+    padding: 64px 68px 72px;
+  }
+
+  .sheet::before{
+    content:"";
+    position:absolute;
+    inset: 10px;
+    border: 1px solid rgba(28,26,22,0.08);
+    pointer-events: none;
+  }
+
+  .kicker{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent-dim);
+    margin: 0 0 18px;
+  }
+
+  h1{
+    font-size: 2.15rem;
+    line-height: 1.18;
+    font-weight: 700;
+    margin: 0 0 6px;
+    color: var(--ink);
+  }
+
+  .subtitle{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+    margin: 0 0 40px;
+    display: inline-block;
+    padding: 5px 12px;
+    border: 1px solid var(--accent-dim);
+    border-radius: 3px;
+    background: rgba(122,59,46,0.06);
+  }
+
+  .divider{
+    height: 1px;
+    background: linear-gradient(to right, var(--rule), transparent 85%);
+    margin: 0 0 40px;
+  }
+
+  section{
+    margin-bottom: 34px;
+  }
+
+  h2{
+    font-size: 1.02rem;
+    font-weight: 700;
+    margin: 0 0 12px;
+    color: var(--accent);
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  h2 .num{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--accent-dim);
+    font-weight: 500;
+  }
+
+  p{
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin: 0 0 12px;
+  }
+
+  ul{
+    margin: 0 0 4px;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  li{
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin-bottom: 12px;
+    padding-left: 22px;
+    position: relative;
+  }
+
+  li::before{
+    content:"—";
+    position:absolute;
+    left:0;
+    color: var(--accent-dim);
+  }
+
+  li strong{
+    color: var(--ink);
+    font-weight: 700;
+  }
+
+  code{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.88em;
+    background: rgba(122,59,46,0.08);
+    color: var(--accent);
+    padding: 1px 6px;
+    border-radius: 3px;
+  }
+
+  .callout{
+    border-left: 3px solid var(--stamp);
+    background: rgba(53,87,63,0.06);
+    padding: 16px 20px;
+    margin: 18px 0 4px;
+    font-size: 0.94rem;
+    color: var(--ink-soft);
+  }
+
+  .callout strong{ color: var(--stamp); }
+
+  a{
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-dim);
+  }
+  a:hover{ color: var(--accent-dim); }
+
+  footer{
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .badge{
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--stamp);
+    border: 1px solid var(--stamp);
+    padding: 3px 9px;
+    border-radius: 2px;
+    margin-top: 4px;
+  }
+
+  @media (max-width: 640px){
+    .sheet{ padding: 40px 26px 48px; margin: 24px 14px 60px; }
+    h1{ font-size: 1.6rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="sheet">
+  <p class="kicker">Extensão para Navegador · Documento Legal</p>
+  <h1>Política de Privacidade</h1>
+  <p class="subtitle">VotoScan PJe</p>
+  <div class="divider"></div>
+
+  <section>
+    <h2><span class="num">1.</span> Compromisso com a Privacidade</h2>
+    <p>Esta extensão foi desenvolvida para auxiliar na rotina de secretaria de sessão do Tribunal Regional Federal da 1ª Região (TRF1), realizando análise e classificação de votos de processos em sessões colegiadas. O desenvolvedor, <strong>Higo Soares</strong>, assume o compromisso de garantir a total privacidade dos dados manipulados pela ferramenta.</p>
+    <ul>
+      <li><strong>Sem Acesso Externo:</strong> a leitura dos dados de votação e a classificação dos processos ocorrem inteiramente no navegador do usuário, de forma local.</li>
+      <li><strong>Garantia de Privacidade:</strong> nenhum dado, número de processo, resultado de votação ou informação exibida na tela do PJe é enviado para servidores externos ou armazenado em nuvem. O desenvolvedor e terceiros não possuem qualquer meio de acesso às informações processadas.</li>
+    </ul>
+    <div class="callout"><strong>Resumo:</strong> os dados nunca saem do seu computador.</div>
+  </section>
+
+  <section>
+    <h2><span class="num">2.</span> Coleta de Dados e Permissões</h2>
+    <ul>
+      <li><strong>Não Coleta:</strong> a extensão não coleta informações de identificação pessoal (PII), não rastreia histórico de navegação e não utiliza cookies.</li>
+      <li><strong>Permissão de Abas:</strong> a permissão <code>tabs</code> é utilizada exclusivamente para verificar a URL da aba ativa, a fim de indicar no popup se o usuário está na página correta do PJe. Nenhum conteúdo das abas é lido ou transmitido.</li>
+      <li><strong>Área de Transferência:</strong> a função de cópia para a área de transferência é acionada apenas mediante clique deliberado do usuário, sem leituras automáticas.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">3.</span> Segurança e Transparência</h2>
+    <p>A ferramenta foi construída seguindo os padrões de segurança do <strong>Manifest V3</strong> do Google Chrome, garantindo código limpo, sem scripts ocultos, atuando exclusivamente no domínio <code>pje2g.trf1.jus.br</code> e restrito à página do Painel do Secretário de Sessão.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">4.</span> Contato</h2>
+    <p>Para dúvidas sobre a operação técnica da ferramenta, entre em contato pelo e-mail: <a href="mailto:higo.barboza@trf1.jus.br">higo.barboza@trf1.jus.br</a>.</p>
+  </section>
+
+  <footer>
+    <span>VotoScan PJe</span>
+    <span class="badge">100% Client-Side</span>
+  </footer>
+</div>
+
+</body>
+</html>
